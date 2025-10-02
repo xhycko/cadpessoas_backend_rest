@@ -1,0 +1,169 @@
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.btn-danger {
+  background-color: #f44336;
+}
+
+.btn-danger:hover {
+  background-color: #da190b;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #545b62;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.actions {
+  white-space: nowrap;
+}
+
+.actions a,
+.actions button {
+  margin-right: 5px;
+  font-size: 14px !important;
+}
+
+.pessoa-form {
+  max-width: 500px;
+}
+
+.health-status {
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.health-up {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.health-down {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.radio-label input[type="radio"] {
+  width: auto;
+  margin-right: 8px;
+  margin-bottom: 0;
+}
+
+.radio-label:hover {
+  color: #4caf50;
+}
+
+/* Padronização de fonte para todos os botões */
+.btn,
+.button,
+button.btn,
+a.btn {
+  font-size: 14px !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* Remove a linha horizontal da última pessoa na tabela */
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+@media (min-width: 600px) {
+  .radio-group {
+    flex-direction: row;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Pessoas</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/frontend.css">
+</head>
+<body>
+    <nav>
+        <ul class="topnav">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="listar-pessoas.html">Listar Pessoas</a></li>
+            <li><a href="adicionar-pessoa.html">Adicionar Pessoa</a></li>
+            <li><a href="health.html">Status da API</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Lista de Pessoas</h1>
+        
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2>Pessoas Cadastradas</h2>
+                <a href="adicionar-pessoa.html" class="btn">Adicionar Pessoa</a>
+            </div>
+            
+            <div id="loading" class="loading">Carregando pessoas...</div>
+            <div id="error-message" class="alert alert-error" style="display: none;"></div>
+            
+            <div id="pessoas-container" style="display: none;">
+                <table id="pessoas-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
+                            <th>Gênero</th>
+                            <th>Data de Nascimento</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pessoas-tbody">
+                    </tbody>
+                </table>
+                
+                <div id="empty-message" style="display: none; text-align: center; padding: 20px; color: #666;">
+                    Nenhuma pessoa cadastrada.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/listar-pessoas.js"></script>
+</body>
+</html>

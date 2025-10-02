@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status da API</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/frontend.css">
+</head>
+<body>
+    <nav>
+        <ul class="topnav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="listar-pessoas.html">Listar Pessoas</a></li>
+            <li><a href="adicionar-pessoa.html">Adicionar Pessoa</a></li>
+            <li><a class="active" href="health.html">Status da API</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Status da API</h1>
+        
+        <div class="card">
+            <h2>Verificação de Saúde do Sistema</h2>
+            
+            <div id="loading" class="loading">Verificando status da API...</div>
+            <div id="error-message" class="alert alert-error" style="display: none;"></div>
+            
+            <div id="health-info" style="display: none;">
+                <div id="health-status" class="health-status">
+                    <strong>Status:</strong> <span id="status-text"></span>
+                </div>
+                
+                <div class="form-group">
+                    <strong>Serviço:</strong> <span id="service-name"></span>
+                </div>
+                
+                <div class="form-group">
+                    <strong>Última Verificação:</strong> <span id="timestamp"></span>
+                </div>
+                
+                <div class="form-group">
+                    <button onclick="verificarHealth()" class="btn">Verificar Novamente</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Informações da API</h2>
+            <ul>
+                <li><strong>Endpoint Base:</strong> /api</li>
+                <li><strong>Banco de Dados:</strong> H2 (In-Memory)</li>
+                <li><strong>Console H2:</strong> <a href="/h2-console" target="_blank">/h2-console</a></li>
+                <li><strong>Endpoints Disponíveis:</strong>
+                    <ul>
+                        <li>GET /api/pessoas - Listar todas as pessoas</li>
+                        <li>GET /api/pessoas/{id} - Buscar pessoa por ID</li>
+                        <li>POST /api/pessoas - Criar nova pessoa</li>
+                        <li>PUT /api/pessoas/{id} - Atualizar pessoa</li>
+                        <li>DELETE /api/pessoas/{id} - Remover pessoa</li>
+                        <li>GET /api/health - Status da API</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/health.js"></script>
+</body>
+</html>

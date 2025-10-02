@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Pessoa</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/frontend.css">
+</head>
+<body>
+    <nav>
+        <ul class="topnav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="listar-pessoas.html">Listar Pessoas</a></li>
+            <li><a href="adicionar-pessoa.html">Adicionar Pessoa</a></li>
+            <li><a href="health.html">Status da API</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Editar Pessoa</h1>
+        
+        <div class="card">
+            <div id="loading" class="loading">Carregando dados da pessoa...</div>
+            <div id="error-message" class="alert alert-error" style="display: none;"></div>
+            
+            <form id="pessoa-form" class="pessoa-form" style="display: none;">
+                <input type="hidden" id="pessoaId" name="id">
+                
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" pattern="\(\d{2}\) \d{4,5}-\d{4}">
+                </div>
+                
+                <div class="form-group">
+                    <label>Gênero:</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="genero" value="Masculino" required>
+                            Masculino
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="genero" value="Feminino" required>
+                            Feminino
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="genero" value="Não Informado" required>
+                            Não Informado
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dataNascimento">Data de Nascimento:</label>
+                    <input type="date" id="dataNascimento" name="dataNascimento" required>
+                </div>
+                
+                <div class="form-group">
+                    <a href="listar-pessoas.html" class="btn btn-secondary">Cancelar</a>
+                    <button type="submit" class="btn">Atualizar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/telefone-mask.js"></script>
+    <script src="js/editar-pessoa.js"></script>
+</body>
+</html>
