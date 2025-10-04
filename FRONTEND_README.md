@@ -1,40 +1,25 @@
 # Frontend
 
-## Pages
-- `index.html` - Home/navigation
-- `listar-pessoas.html` - Table view, edit/delete
-- `adicionar-pessoa.html` - Create form
-- `editar-pessoa.html` - Edit form (URL param `?id=1`)
-- `health.html` - API status monitor
+## Páginas
+- `index.html` - Início/navegação
+- `listar-pessoas.html` - Tabela, editar/excluir
+- `adicionar-pessoa.html` - Formulário criação
+- `editar-pessoa.html` - Formulário edição (`?id=1`)
+- `health.html` - Monitor status API
 
-## Tech Stack
+## Stack
 - HTML5/CSS3
 - Vanilla JS + Fetch API
-- Responsive design
+- Design responsivo
 
-## Features
-- CRUD operations
-- Loading states
-- Error handling
-- Date formatting (pt-BR)
-- Auto-redirect after actions
-- No confirmations
+## Funcionalidades
+- Operações CRUD
+- Estados loading/erro
+- Formatação data (pt-BR)
+- Redirecionamento automático
 
-## Structure
-```
-static/
-├── *.html
-├── style/
-│   ├── style.css
-│   └── frontend.css
-└── js/
-    ├── api.js
-    ├── utils.js
-    └── *.js (page-specific)
-```
-
-## Usage
+## Uso
 ```bash
 ./mvnw spring-boot:run
 ```
-Access: `http://localhost:8080`
+Acesso: `http://localhost:8080`

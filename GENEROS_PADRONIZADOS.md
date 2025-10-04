@@ -1,16 +1,16 @@
-# Gender Values
+# Valores de Gênero
 
-## Accepted Values
+## Valores Aceitos
 - `Masculino`
 - `Feminino` 
 - `Não Informado`
 
-## Implementation
-- **Backend**: `VARCHAR(255)`, no validation
-- **Frontend**: Radio buttons (required)
-- **Database**: Sample data in `import.sql`
+## Implementação
+- **Backend**: `VARCHAR(255)`, sem validação
+- **Frontend**: Radio buttons (obrigatório)
+- **Database**: Dados exemplo em `import.sql`
 
-## Sample Data
+## Dados Exemplo
 - Maria da Penha - Feminino
 - Pedro Cabral - Não Informado  
 - Tarsila do Amaral - Não Informado

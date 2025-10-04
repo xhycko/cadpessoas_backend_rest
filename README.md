@@ -1,18 +1,18 @@
 # Cadastro de Pessoas
 
-Spring Boot REST API + Vanilla JS frontend for person management.
+API REST Spring Boot + Frontend Vanilla JS para gerenciamento de pessoas.
 
-## Quick Start
+## Início Rápido
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-Access: `http://localhost:8080`
+Acesso: `http://localhost:8080`
 
 ## Stack
 
 - Spring Boot 2.6.4
-- H2 Database (in-memory)
+- H2 Database (em memória)
 - Vanilla JavaScript
 - Java 11

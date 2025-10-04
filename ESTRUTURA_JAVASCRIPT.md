@@ -1,19 +1,14 @@
-# JavaScript Structure
+# Estrutura JavaScript
 
-## Files
-```
-js/
-├── api.js              # REST API calls
-├── utils.js            # Reusable helpers
-├── listar-pessoas.js   # List page logic
-├── adicionar-pessoa.js # Add page logic
-├── editar-pessoa.js    # Edit page logic
-└── health.js           # Health page logic
-```
+## Arquivos
+- `api.js` - Chamadas REST API
+- `utils.js` - Utilitários (formatação data, parâmetros URL, erro/loading)
+- `listar-pessoas.js` - Lógica listagem/exclusão
+- `adicionar-pessoa.js` - Formulário criação
+- `editar-pessoa.js` - Formulário edição
+- `health.js` - Monitoramento API (refresh 30s)
 
-## Modules
-
-### `api.js`
+## Métodos API
 - `listarPessoas()` - GET /api/pessoas
 - `buscarPessoa(id)` - GET /api/pessoas/{id}
 - `criarPessoa(pessoa)` - POST /api/pessoas
@@ -21,42 +16,25 @@ js/
 - `removerPessoa(id)` - DELETE /api/pessoas/{id}
 - `verificarHealth()` - GET /api/health
 
-### `utils.js`
-- `formatarData(dataString)` - Format dates (pt-BR)
-- `obterParametroUrl(nome)` - Extract URL params
-- `mostrarErro(mensagem)` - Show error messages
-- `esconderErro()` - Hide error messages
-- `redirecionarPara(url)` - Navigate
-- `mostrarLoading()` / `esconderLoading()` - Loading control
-
-### Page-specific modules
-- **listar-pessoas.js**: Load/display table, delete
-- **adicionar-pessoa.js**: Form processing, redirect
-- **editar-pessoa.js**: Load by ID, update, redirect
-- **health.js**: API monitoring, auto-refresh (30s)
-
-## Pattern
+## Padrão
 ```javascript
-const ModuleName = {
-  async method() {
+const Modulo = {
+  async metodo() {
     try {
       const data = await API.endpoint();
     } catch (error) {
       Utils.mostrarErro(error.message);
     }
   },
-  
   init() {
     document.addEventListener('DOMContentLoaded', () => {
       this.configurarEventos();
     });
   }
 };
-
-ModuleName.init();
 ```
 
-## Loading Order
+## Ordem de Carregamento
 ```html
 <script src="js/api.js"></script>
 <script src="js/utils.js"></script>
